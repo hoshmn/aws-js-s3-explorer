@@ -215,14 +215,14 @@ function folder2breadcrumbs(data) {
 
         // Add the bucket (the bucket is always first)
         if (ii === 0) {
-            var span1 = $('<span>').text(part);
-            ipart = $('<li>').append(span1);
+            var mainLink = $('<a>').attr('href', '/').text(part);
+            ipart = $('<li>').append(mainLink);
         // Else add the folders within the bucket
         } else {
             buildprefix += part + '/';
 
             if (ii == parts.length - 1) {
-                ipart = $('<li>').addClass('active').text(part);
+                ipart = $('<li>').addClass('active').text(part.toUpperCase());
             } else {
                 var a2 = $('<a>').attr('href', '#').append(part);
                 ipart = $('<li>').append(a2);
@@ -360,7 +360,7 @@ $(document).ready(function(){
             return fullpath2filename(data);
         } else if (isfolder(data)) {
             console.log("is folder: " + data);
-            return '<a data-s3="folder" data-prefix="' + data + '" href="' + object2hrefvirt(s3exp_config.Bucket, data) + '">' + prefix2folder(data) + '</a>';
+            return '<a data-s3="folder" data-prefix="' + data + '" href="' + object2hrefvirt(s3exp_config.Bucket, data) + '">' + prefix2folder(data).toUpperCase() + '</a>';
         } else {
             console.log("not folder/this document: " + data);
             return '<a data-s3="object" href="' + object2hrefvirt(s3exp_config.Bucket, data) + '">' + fullpath2filename(data) + '</a>';
