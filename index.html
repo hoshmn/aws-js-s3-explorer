@@ -18,7 +18,7 @@ permissions and limitations under the License.
 
 <html lang="en">
     <head>
-        <title>Eviction Lab Public Data</title>
+        <title>Eviction Lab Data Downloads</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="https://beta.evictionlab.org/favicon.ico">
@@ -96,7 +96,7 @@ permissions and limitations under the License.
                                 This data is provided by <a href="https://evictionlab.org">The Eviction Lab at Princeton University</a>.
                                 To learn more about how we gathered and validated the data, please visit our <a href="https://evictionlab.org/methods">Methods page</a>.
                                 All files are hosted on AWS S3, and can be accessed via the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html" target="_blank">S3 API</a>
-                                in the <span style="font-family: Menlo,Monaco,Consolas,monospace">eviction-lab-public-data</span> bucket.
+                                in the <span style="font-family: Menlo,Monaco,Consolas,monospace">eviction-lab-data-downloads</span> bucket.
                             </p>
                             <p>
                                 Any works citing Eviction Lab data should use the following citation:
@@ -138,7 +138,7 @@ permissions and limitations under the License.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap.min.js"></script>
 
 <script type="text/javascript">
-var s3exp_config = { Region: 'us-east-1', Bucket: 'eviction-lab-public-data', Prefix: '', Delimiter: '/' };
+var s3exp_config = { Region: 'us-east-1', Bucket: 'eviction-lab-data-downloads', Prefix: '', Delimiter: '/' };
 var s3exp_lister = null;
 var s3exp_columns = { key:1, folder:2, date:3, size:4 };
 
