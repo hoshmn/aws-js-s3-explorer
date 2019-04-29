@@ -18,10 +18,10 @@ permissions and limitations under the License.
 
 <html lang="en">
     <head>
-        <title>Eviction Lab Data Downloads</title>
+        <title>Educational Opportunity Data Downloads</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="https://evictionlab.org/favicon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap.min.css">
@@ -29,7 +29,7 @@ permissions and limitations under the License.
             #wrapper { padding-left: 0; }
             #page-wrapper { width: 100%; }
             #tb-s3objects { width: 100% !Important; }
-            a { color: #e24000; }
+            a { color: #1345c4; }
             body { font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
             td { font: 12px "Lucida Grande", Helvetica, Arial, sans-serif; }
             blockquote { font-size: 14px; }
@@ -70,8 +70,8 @@ permissions and limitations under the License.
                             <!-- Bucket selection and breadcrumbs -->
                             <div class="btn-group pull-left">
                                 <div class="pull-left logo">
-                                    <a href="https://evictionlab.org">
-                                        <img src="https://evictionlab.org/img/eviction-lab-logo.svg">
+                                    <a href="/">
+                                        Educational Opportunity
                                     </a>
                                 </div>
                                 <!-- Bucket breadcrumbs -->
@@ -95,19 +95,17 @@ permissions and limitations under the License.
                         <!-- Panel including S3 object table -->
                         <div class="panel-body">
                             <p>
-                                This data is provided by <a href="https://evictionlab.org">The Eviction Lab at Princeton University</a>.
-                                To learn more about how we gathered and validated the data, please visit our <a href="https://evictionlab.org/methods">Methods page</a>.
+                                This data is provided by <a href="/">The Educational Opportunity Project at Standford</a>.
+                                To learn more about how we gathered and validated the data, please visit our <a href="/methods">Methods page</a>.
                                 All files are hosted on AWS S3, and can be accessed via the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html" target="_blank">S3 API</a>
-                                in the <span style="font-family: Menlo,Monaco,Consolas,monospace">eviction-lab-data-downloads</span> bucket.
+                                in the <span style="font-family: Menlo,Monaco,Consolas,monospace">seda-public-data</span> bucket.
                             </p>
                             <p>
-                                Any works citing Eviction Lab data should use the following citation:
+                                Any works citing the Educational Opportunity Project data should use the following citation:
                                 <blockquote>
-                                    This research uses data from The Eviction Lab at Princeton University, a project directed by Matthew Desmond and designed
-                                    by Ashley Gromis, Lavar Edmonds, James Hendrickson, Katie Krywokulski, Lillian Leung, and Adam Porton. The Eviction Lab is
-                                    funded by the JPB, Gates, and Ford Foundations as well as the Chan Zuckerberg Initiative. More information is found at evictionlab.org.
+                                    Citation text
                                 </blockquote>
-                                If you use this data in your research or reporting, <a href="https://evictionlab.org/contact">please share it with us</a>.
+                                If you use this data in your research or reporting, <a href="/contact">please share it with us</a>.
                             </p>
                             <table class="table table-bordered table-hover table-striped" id="tb-s3objects">
                                 <thead>
@@ -137,7 +135,7 @@ permissions and limitations under the License.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap.min.js"></script>
 
 <script type="text/javascript">
-var s3exp_config = { Region: 'us-east-1', Bucket: 'eviction-lab-data-downloads', Prefix: '', Delimiter: '/' };
+var s3exp_config = { Region: 'us-east-1', Bucket: 'seda-public-data', Prefix: '0.0.1/', Delimiter: '/' };
 var s3exp_lister = null;
 var s3exp_columns = { key:1, folder:2, date:3, size:4 };
 
